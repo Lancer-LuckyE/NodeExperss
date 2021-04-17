@@ -1,0 +1,4 @@
+# Project exclude paths
+/courseFiles/complete-node-bootcamp-master/4-natours/after-section-09/node_modules/
+/node_modules/
+.env

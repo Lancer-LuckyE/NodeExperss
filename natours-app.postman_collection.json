@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "c1df489f-0c86-476e-a908-d078976b3def",
+		"name": "natours-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "tours",
+			"item": [
+				{
+					"name": "get tours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/tours",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"tours"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create tour",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"The Northern Lights\",\n    \"duration\": 3,\n    \"maxGroupSize\": 12,\n    \"difficulty\": \"easy\",\n    \"ratingsAverage\": 4.9,\n    \"ratingsQuantity\": 33,\n    \"price\": 1497,\n    \"summary\": \"Enjoy the Northern Lights in one of the best places in the world\",\n    \"description\": \"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!\",\n    \"imageCover\": \"tour-9-cover.jpg\",\n    \"images\": [\n      \"tour-9-1.jpg\",\n      \"tour-9-2.jpg\",\n      \"tour-9-3.jpg\"\n    ],\n    \"startDates\": [\n      \"2021-12-16,10:00\",\n      \"2022-01-16,10:00\",\n      \"2022-12-12,10:00\"\n    ]\n}\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/tours",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"tours"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single tour",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/tours/5ffd0309a475387ef5bddb2c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"tours",
+								"5ffd0309a475387ef5bddb2c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update tour",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"price\": 375\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/tours/5ffd0309a475387ef5bddb2c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"tours",
+								"5ffd0309a475387ef5bddb2c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete tour",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/tours/5ffd14b36a1e1b809b146550",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"tours",
+								"5ffd14b36a1e1b809b146550"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get top tours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/tours/top-five-tours",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"tours",
+								"top-five-tours"
+							],
+							"query": [
+								{
+									"key": "difficulty",
+									"value": "easy",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "-ratingsAverage",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "difficulty,duration,price,name,createdAt",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "duration[lte]",
+									"value": "7",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
